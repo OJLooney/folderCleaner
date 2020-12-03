@@ -2,10 +2,6 @@ import os
 import re
 import shutil
 
-
-fileTypes = ["pdf","png","jpeg","txt","docx","jpg","pptx","doc","csv","py","zip","odp","h","cpp"]
-directory = "C:\\Users\\Olly_\\Downloads"
-
 def cleanFolder(fileTypes, directory):
     #create regex for files
     filenameRegex = re.compile(r'(.+)\.(.+)')
@@ -40,7 +36,7 @@ def getDirectory():
     updatedDirectory = ""
     for i in range(len(directory)):
         if directory[i] == '\\':
-            updatedDirectory += "\\"#every '\\' needs a '\' as a flag for later in the program.
+            updatedDirectory += "\\"#every '\' needs a '\' as a flag for later in the program.
         updatedDirectory += directory[i]
     
     return updatedDirectory
